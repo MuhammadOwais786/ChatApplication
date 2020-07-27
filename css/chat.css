@@ -83,7 +83,7 @@ body{
 .conversation:hover{
     cursor: pointer;
 }
-.conversation > img {
+.conversation > img , .message-content > img , #chat-title-user-img{
     grid-row: span 2;
     height: 40px;
     width: 40px;
@@ -144,8 +144,14 @@ body{
     border-radius: 0 10px 0 0;
     box-shadow: 0 1px 3px -1px rgba(0, 0 , 0, 0.75);
     padding: 0 20px;
+    /* margin-right: -598px; */
+    
 }
-#chat-title > img{
+#chat-title > span{
+    float: right;
+    margin-right: 200px;
+}
+#chat-title > .delete-chat{
     cursor: pointer;
     width: 200;
     height: 40px;
@@ -168,16 +174,16 @@ body{
     justify-content: end;
     /* justify-items: end; */
 }
-.you-message, .message-content{
-    /* justify-items: end; */
-}
+/* .you-message, .message-content{
+    justify-items: end;
+} */
 .other-message{
     justify-items: start;
     /* margin-right: 80% !important; */
 }
-.other-message .message-content{
+/* .other-message .message-content{
     
-}
+} */
 .message-text{
     padding: 9px 14px;
     font-size: 1.6rem;
