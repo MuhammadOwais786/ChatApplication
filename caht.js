@@ -11,8 +11,11 @@ function loginWithFB(){
         // ...
 
         firebase.firestore().collection('users').doc().set({
-          displayName,
-
+          displayName:user.displayName,
+          email:user.email,
+          phoneNumber:user.phoneNumber,
+          photoURL:user.photoURL,
+          uid:user.uid
         }).then(function(){
           alert("OK RECEiveD")
         })
