@@ -9,6 +9,16 @@ function loginWithFB(){
         console.log(user)
         alert(user)
         // ...
+
+        firebase.firestore().collection('users').doc().set({
+        
+        }).then(function(){
+          alert("OK RECEiveD")
+        })
+        .catch(function(error){
+          alert(error)
+        })
+
       }).catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;
@@ -22,3 +32,10 @@ function loginWithFB(){
       });
 
 }
+
+/*===================================================================================================
+                                      Conversation List
+=====================================================================================================*/
+
+
+
