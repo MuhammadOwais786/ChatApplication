@@ -10,7 +10,7 @@ function loginWithFB(){
         // alert(user)
         // ...
 
-        firebase.firestore().collection('users').doc(userID).set({
+        firebase.firestore().collection('users').doc().set({
           displayName,
 
         }).then(function(){
